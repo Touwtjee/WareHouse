@@ -5,12 +5,19 @@
 
 /* Site-Wide Styles */
 
+:root{
+  --primary-color: #cb2d6f;
+  --primary-subcolor: #501f3a;
+  --secondary-color: #14a098;
+  --secondary-subcolor: #0f292F;
+}
+
 html {
   font-size: 16px;
 }
 
 body {
-  font-family: 'Arial-MT', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: hsla(0, 0%, 29%, 1);
 }
 
@@ -25,9 +32,12 @@ a:hover {
 
 h1,
 h2,
-h3,
 h4 {
+font-family:'Abril Fatface', cursive;
+}
 
+h2{
+  font-size: 2rem;
 }
 
 input,
@@ -42,7 +52,7 @@ select {
 
 .button {
   border-radius: 30px;
-  background-color: hsla(0, 0%, 13%, 1);
+  background-color: var(--primary-color);
   text-align: center;
   color: hsla(0, 0%, 93%, 1);
   transition: .25s;
@@ -62,7 +72,7 @@ select {
 
 .image-container img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -80,8 +90,7 @@ select {
 
 .product-category {
   border-radius: 2px;
-  background-color: hsla(0, 0%, 100%, 1);
-  border: solid 1px hsla(0, 0%, 91%, 1);
+  padding: .5rem;
 }
 
 .product-category .description-category {
@@ -96,13 +105,13 @@ select {
 
 .product-item {
   border-radius: 2px;
-  background-color: hsla(0, 0%, 100%, 1);
-  border: solid 1px hsla(0, 0%, 91%, 1);
+  padding: .5rem;
 }
 
 .product-item .description {
   padding: 1.5rem;
   text-align: left;
+  border-bottom: solid 1px hsla(0, 0%, 91%, 1);
 }
 
 
@@ -187,6 +196,10 @@ header {
   background-color: hsla(0, 0%, 93%, 1);
 }
 
+header .image-container img{
+  width: auto;
+}
+
 .search-bar {
   display: flex;
   border-radius: 33px 53px 33pzx 53px;
@@ -233,8 +246,17 @@ nav {
   padding: 1.313rem 24.25rem 1.313rem 25rem;
 }
 
-nav a:visted {
-  color: hsla(0, 0%, 29%, 1);
+nav a {
+  font-weight: bold;
+  transition: color 1s ease;
+}
+
+nav a:hover{
+  color: var(--secondary-color);
+}
+
+nav a:active{
+  font-size: 1.1rem;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -267,7 +289,6 @@ nav a:visted {
 
 #main h2 {
   margin-bottom: 2rem;
-  font-size: inherit;
 }
 
 #main .button {
@@ -286,6 +307,11 @@ footer {
   background-color: hsla(0, 100%, 100%, 1);
 }
 
+footer h4{
+  color: var(--secondary-color);
+  padding-bottom: .5rem;
+}
+
 footer img {
   align-self: center;
   justify-self: center;
@@ -297,6 +323,16 @@ footer .links {
 
 footer a {
   color: hsla(0, 0%, 29%, 1);
+  padding-bottom: 1rem;
+  transition: color 1s ease;
+}
+
+footer a:hover{
+  color: var(--secondary-color);
+}
+
+footer a:active{
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 810px) {
