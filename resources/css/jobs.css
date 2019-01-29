@@ -19,13 +19,21 @@ form {
   margin-bottom: 3.125rem;
 }
 
+input{
+  padding:
+}
+
 #main form .button {
   height: fit-content;
   padding: 1.14rem 0;
 }
 
 .job-list {
-  border-top: solid 1px hsla(0, 0%, 59%, 1);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+
 }
 
 .job {
@@ -42,4 +50,8 @@ form {
 #see-all-jobs {
   justify-self: center;
   margin-top: 3.6875rem;
+}
+
+.field{
+  padding: 0 .5rem;
 }
